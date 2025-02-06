@@ -1,15 +1,20 @@
-# estufa
+# Projeto Estufa
+Projeto de uma estufa de cuidado automatico de plantas 
 
-projeto de estufa residencial
+### Design:
+ ```
 
-## Design:
 •	Aparência da Estufa
 	o	Formato do vaso
 	o	Posicionamento do domo da estufa
 •	Aparência do Site
 	o	Cores principais do site
 	o	Linguagem visual (feeling que a gente quer passar)
-## Pesquisa:
+ ```
+
+### Pesquisa:
+ ```
+
 •	Flores / Plantas mais utilizadas (apto.)
 •	Detalhes dessas Plantas (necessários para sobrevivência)
 	o	% de Umidade do ar e do solo
@@ -17,7 +22,11 @@ projeto de estufa residencial
 •	Materiais utilizados
 	o	Vaso
 	o	Domo
-## Estufa (física):
+  ```
+
+### Estufa (física):
+ ```
+
 •	Bomba de água
 •	Vaso c/ compartimento para os eletrônicos e a água
 •	Placa de processamento
@@ -34,7 +43,10 @@ projeto de estufa residencial
 •	Energia
 	o	Power Bank
 	o	Pilhas
- ## Site:
+ ```
+
+ ### Site:
+ ```
 •	Front-end
 	o	HTML
 	o	CSS
@@ -45,3 +57,4 @@ projeto de estufa residencial
 	o	Servidor utilizado (infinityfree.com)
 	o	Dataset das Plantas
 	o	API que conversa com a estufa
+ ```
