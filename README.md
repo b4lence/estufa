@@ -1,57 +1,58 @@
 # Projeto Estufa
-Projeto de uma estufa de cuidado automatico de plantas 
+Projeto da estufa para o TCC.
 
-### Design:
- ```
-	• Aparência da Estufa
-		o Formato do vaso
-		o Posicionamento do domo da estufa
-	• Aparência do Site
-		o Cores principais do site
-		o Linguagem visual (feeling que a gente quer passar)
- ```
+# Requisitos e Atribuição de funções
+OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 
-### Pesquisa:
- ```
-	• Flores / Plantas mais utilizadas (apto.)
-	• Detalhes dessas Plantas (necessários para sobrevivência)
-		o % de Umidade do ar e do solo
-		o Graus C°
-	• Materiais utilizados
-		o Vaso
-		o Domo
-  ```
+## Pesquisa:
+ 
+**Atribuído a: Kauã e Tarik**
+* Flores / Plantas mais utilizadas (apto.)
+* Detalhes sobre o cuidado dessas plantas
+	* % da Umidade do ar
+	* % da Umidade do solo
+	* Temperatura necessária
+* Materiais que devem ser utilizados
+	* Vaso
+	* Domo
+* Pesquisa geral sobre o funcionamento de uma estufa (caso tenhamos perdido algo)
+  
 
-### Estufa (física):
- ```
-	• Bomba de água
-	• Vaso c/ compartimento para os eletrônicos e a água
-	• Placa de processamento
-		o Raspberry
-		o Arduino
-	• Domo de plástico / acrílico
-		o Permite a passagem de Luz
-		o Bloqueia o Ar e permite que ele aqueça
-	• Sensores
-		o Umidade do Ar
-		o Umidade do Solo
-		o Temperatura 
-	• Ventilador
-	• Energia
-		o Power Bank
-		o Pilhas
- ```
+## Design:
+ 
+**Atribuído a: Todos**
+* Aparência da Estufa
+	* Formato do vaso
+	* Posicionamento do domo da estufa
+	* Modelagem em 3D da estufa usando AutoCAD
+* Aparência do Site
+	* Cores principais do site
+	* Wireframe do site usando Figma
+ 
 
- ### Site:
- ```
-	• Front-end
-		o HTML
-		o CSS
-		o JS
-	• Back-end
-		o PHP
-		o Estrutura do banco (NoSql ou Sql)
-		o Servidor utilizado (infinityfree.com)
-		o Dataset das Plantas
-		o API que conversa com a estufa
- ```
+## Pesquisa dos componentes e funcionamento da estufa:
+ 
+**Atribuído a: Vinícius**
+* Bomba de água e um sistema de irrigação
+* Placa de processamento utilizada
+	* Raspberry
+	* Arduino
+* Sensores
+	* Umidade do Ar
+	* Umidade do Solo
+	* Temperatura 
+* Ventilador
+* Alimentação de todos componentes (energia)
+## Confecção do Site:
+**Atribuído a: Erik e Miguel**
+* Front-end
+	* HTML
+	* CSS
+	* JS
+* Back-end
+	* PHP
+	* Estrutura do banco (NoSql ou Sql)
+	* Servidor (infinityfree.com ou host direto do raspberry)
+	* Dataset das Plantas
+	* API que conversa com a estufa
+ 
