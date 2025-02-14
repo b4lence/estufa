@@ -8,13 +8,23 @@ Projeto da estufa para o TCC.
 # Requisitos e Atribuição de funções
 OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 
-**Fase 1 - Inicialização**
-**5 Tópicos preenchidos:**
-	* Objetivo (claro, sucinto e sem economizar palavras);
-	* Gerentes (planejamento);
-	* Prazos (inicial e final);
-	* Recursos (TUDO que será utilizado);
-	* Viabilidade (visão de viabilidade da ideia e da execução);
+Fase 1 - Inicialização
+
+5 Tópicos preenchidos:
+	- Objetivo (claro, sucinto e sem economizar palavras);
+	- Gerentes (planejamento);
+	- Prazos (inicial e final);
+	- Recursos (TUDO que será utilizado);
+	- Viabilidade (visão de viabilidade da ideia e da execução).
+
+Fase 2 - Planejamento
+
+5 Tópicos preenchidos:
+	- Escopo (o que faremos);
+	- Cronograma (milestones);
+	- Custo (custo geral do projeto como um todo);
+	- Riscos (dano humano e dano ao projeto);
+	- EAP (gráfico).
 
 ## Pesquisa:
  
