@@ -3,7 +3,7 @@ Projeto da estufa para o TCC.
 
 # Links Relacionados
 
-* *[Planilha das plantas](https://docs.google.com/spreadsheets/d/1DxUFdkF3w8XQ0XVTYavp1nsInuSnSRoQ_rI*boFuYWI/edit?usp=sharing)*
+* *[Planilha das plantas](https://docs.google.com/spreadsheets/d/1DxUFdkF3w8XQ0XVTYavp1nsInuSnSRoQ_rI-boFuYWI/edit?usp=sharing)*
 
 # Requisitos e Atribuição de funções
 OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
