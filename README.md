@@ -4,6 +4,7 @@ Projeto da estufa para o TCC.
 # Links Relacionados
 
 * *[Planilha das plantas](https://docs.google.com/spreadsheets/d/1DxUFdkF3w8XQ0XVTYavp1nsInuSnSRoQ_rI-boFuYWI/edit?usp=sharing)*
+* *[Termo de Abertura de Projeto (TAP)](https://docs.google.com/document/d/1dYLkItOKF_ru-9NcqR4M65-ckjDk8mo8C1D-08LV1oc/edit?usp=sharing)*
 
 # Requisitos e Atribuição de funções
 OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
