@@ -11,20 +11,19 @@ CREATE TABLE targets(
 );
 
 CREATE TABLE users(
-	id INT AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     email VARCHAR(25) NOT NULL,
-	pwd VARCHAR(50) NOT NULL,
+    pwd VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE user_data(
-    id INT AUTO_INCREMENT NOT NULL,
     user_id INT NOT NULL,
-    target_plant INT NOT NULL,
     recorded_time DATETIME NOT NULL,
+    target_plant INT NOT NULL,
     moisture INT NOT NULL,
     temp INT NOT NULL,
-    PRIMARY KEY (id),
+    PRIMARY KEY (user_id, recorded_time),
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (target_plant) REFERENCES targets(id)
 );
