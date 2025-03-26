@@ -52,14 +52,14 @@ OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 * Alimentação de todos componentes (energia)
 ## Confecção do Site:
 **Atribuído a: Erik e Miguel**
-* Front*end
+* Front-end
 	* HTML
 	* CSS
 	* JS
-* Back*end
+* Back-end
 	* PHP
 	* Estrutura do banco (NoSql ou Sql)
-	* Servidor (infinityfree.com ou host direto do raspberry)
-	* Dataset das Plantas
+	* Servidor
+	* Implementar o dataset das plantas
 	* API que conversa com a estufa
  
