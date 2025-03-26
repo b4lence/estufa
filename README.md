@@ -28,11 +28,11 @@ OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 ## Design:
  
 **Atribuído a: Todos**
-* Aparência da Estufa
+* Design da Estufa
 	* Formato do vaso
 	* Posicionamento do domo da estufa
-	* Modelagem em 3D da estufa usando AutoCAD
-* Aparência do Site
+	* Modelagem em 3D da estufa usando FreeCAD
+* Design do Site
 	* Cores principais do site
 	* Wireframe do site usando Figma
  
