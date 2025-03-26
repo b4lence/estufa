@@ -6,6 +6,7 @@ Projeto da estufa para o TCC.
 * *[Planilha das plantas](https://docs.google.com/spreadsheets/d/1DxUFdkF3w8XQ0XVTYavp1nsInuSnSRoQ_rI-boFuYWI/edit?usp=sharing)*
 * *[Termo de Abertura de Projeto (TAP)](https://docs.google.com/document/d/1dYLkItOKF_ru-9NcqR4M65-ckjDk8mo8C1D-08LV1oc/edit?usp=sharing)*
 * *[Fases do Projeto (Incompleto)](https://docs.google.com/document/d/16Nu-4rwIQC-3I8chDFvh__kqMV5D21lxSRq0bxEY3mM/edit?usp=sharing)*
+* *[Wireframe](https://www.figma.com/design/yG0m5uYADfYsMRrRwsx73K/Untitled?node-id=0-1&m=dev&t=rhYbx9zdhzC8Pc6c-1)*
 
 # Requisitos e Atribuição de funções
 OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
