@@ -1,196 +1,208 @@
-function ultimos7dias() {
-    const labels = [];
-    const today = new Date();
+let arrayTemperatura = [];
+let arrayUmidadeAr = [];
+let arrayUmidadeSolo = [];
+let arrayData = [];
+let arrayHora = [];
+let reservatorio = 0;
+let rpm = 0;
 
-    for (let i = 6; i >= 0; i--) {
-        const day = new Date();
-        day.setDate(today.getDate() - i);
-        labels.push(day.toLocaleDateString('pt-BR'));
-    }
-
-    return labels;
-}
-
-const labels = ultimos7dias();
-const data = {
-    labels: labels,
+function tabelaUmidade(){
+  const dataUmidade = {
+    labels: arrayData,
     datasets: [
-        {
-            label: 'Umidade - solo (%)',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            backgroundColor: 'rgba(43, 189, 83, 0.5)',
-            borderColor: 'rgb(43, 189, 83)',
-            borderWidth: 2,
-            tension: 0.1
-        },
-        {
-            label: 'Umidade - ar (%)',
-            data: [45, 89, 30, 61, 46, 25, 60],
-            backgroundColor: 'rgba(64, 135, 83, 0.5)',
-            borderColor: 'rgb(64, 135, 83)',
-            borderWidth: 2,
-            tension: 0.1
-        }
+      {
+        label: 'Umidade - solo (%)',
+        data: arrayUmidadeSolo,
+        backgroundColor: 'rgba(43, 189, 83, 0.5)',
+        borderColor: 'rgb(43, 189, 83)',
+        borderWidth: 2,
+        tension: 0.1
+      },
+      {
+        label: 'Umidade - ar (%)',
+        data: arrayUmidadeAr,
+        backgroundColor: 'rgba(64, 135, 83, 0.5)',
+        borderColor: 'rgb(64, 135, 83)',
+        borderWidth: 2,
+        tension: 0.1
+      }
     ]
-};
-
-const config = {
+  };
+  
+  const config = {
     type: 'line',
-    data: data,
+    data: dataUmidade,
     options: {
-        responsive: false,
-        maintainAspectRatio: false,
-        layout: {
+      responsive: false,
+      maintainAspectRatio: false,
+      layout: {
         padding: {
-            right: 35,
-            left:20
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    display: true
-                },
-                grid: {
-                    display: true
-                }
-            },
-            y: {
-                beginAtZero: true,
-            }
+          right: 35,
+          left: 20
         }
+      },
+      scales: {
+        x: {
+          ticks: {
+            display: true
+          },
+          grid: {
+            display: true
+          }
+        },
+        y: {
+          beginAtZero: true,
+        }
+      }
     }
-};
-
-new Chart(
+  };
+  
+  new Chart(
     document.getElementById('graficoUmidade'),
     config
-);
+  );
+}
 
-// Código para o gráfico de umidade do solo e do ar.
-
-const valorReservatorio = 72;
-
-const dataReservatorio = {
-  labels: ['Nível - Reservatório (%)', 'Vazio'],
-  datasets: [{
-    label: 'Porcentagem',
-    data: [valorReservatorio, 100 - valorReservatorio],
-    backgroundColor: [
-      'rgb(20, 173, 132)',
-      'rgb(229, 229, 229)'
-    ],
-    hoverOffset: 4
-  }]
-};
-
-const configReservatorio = {
-  type: 'doughnut',
-  data: dataReservatorio,
-  options: {
-    plugins: {
-      legend: {
-        labels: {
-          filter: function(item, chart) {
-            return item.text !== 'Vazio';
+function tabelaReservatorio(){
+  const dataReservatorio = {
+    labels: ['Nível - Reservatório (%)', 'Vazio'],
+    datasets: [{
+      label: 'Porcentagem',
+      data: [reservatorio, 100 - reservatorio],
+      backgroundColor: [
+        'rgb(20, 173, 132)',
+        'rgb(229, 229, 229)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+  
+  const configReservatorio = {
+    type: 'doughnut',
+    data: dataReservatorio,
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            filter: function (item, chart) {
+              return item.text !== 'Vazio';
+            }
           }
         }
       }
     }
-  }
-};
+  };
+  
+  new Chart(
+    document.getElementById('graficoReservatorio'),
+    configReservatorio
+  );
+}
 
-new Chart(
-  document.getElementById('graficoReservatorio'),
-  configReservatorio
-);
-
-// Código para o gráfico do nível do reservatório.
-
-const labelsTemp = ultimos7dias();
-const dataTemp = {
-    labels: labelsTemp,
+function tabelaTemperatura(){
+  const dataTemp = {
+    labels: arrayData,
     datasets: [
-        {
-            label: 'Temperatura (Graus Celsius)',
-            data: [25, 19, 30, 31, 26, 25, 20],
-            backgroundColor: 'rgba(43, 189, 83, 0.5)',
-            borderColor: 'rgb(43, 189, 83)',
-            borderWidth: 2,
-            tension: 0.1
-        },
+      {
+        label: 'Temperatura (Graus Celsius)',
+        data: arrayTemperatura,
+        backgroundColor: 'rgba(43, 189, 83, 0.5)',
+        borderColor: 'rgb(43, 189, 83)',
+        borderWidth: 2,
+        tension: 0.1
+      },
     ]
-};
-
-const configTemp = {
+  };
+  const configTemp = {
     type: 'line',
     data: dataTemp,
     options: {
-        responsive: false,
-        maintainAspectRatio: false,
-        layout: {
+      responsive: false,
+      maintainAspectRatio: false,
+      layout: {
         padding: {
-            right: 35,
-            left:20
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    display: true
-                },
-                grid: {
-                    display: true
-                }
-            },
-            y: {
-                beginAtZero: true,
-            }
+          right: 35,
+          left: 20
         }
+      },
+      scales: {
+        x: {
+          ticks: {
+            display: true
+          },
+          grid: {
+            display: true
+          }
+        },
+        y: {
+          beginAtZero: true,
+        }
+      }
     }
-};
-
-new Chart(
+  };
+  
+  new Chart(
     document.getElementById('graficoTemp'),
     configTemp
-);
+  );
+}
 
-// Código para o gráfico da temperatura.
-
-const valorRPM = 615;
-
-const dataRPM = {
-  labels: ['Rotações por minuto (RPM)', 'Stand By'],
-  datasets: [{
-    label: 'Rotações por minuto (RPM)',
-    data: [valorRPM, 1485 - valorRPM],
-    backgroundColor: [
-      'rgb(20, 173, 132)', 
-      'rgb(229, 229, 229)'  
-    ],
-    hoverOffset: 4
-  }]
-};
-
-const configRPM = {
-  type: 'doughnut',
-  data: dataRPM,
-  options: {
-    plugins: {
-      legend: {
-        labels: {
-          filter: function(item, chart) {
-            return item.text !== 'Stand By';
+function tabelaRPM(){
+  const dataRPM = {
+    labels: ['Rotações por minuto (RPM)', ''],
+    datasets: [{
+      label: 'Rotações por minuto (RPM)',
+      data: [rpm, 1485 - rpm],
+      backgroundColor: [
+        'rgb(20, 173, 132)',
+        'rgb(229, 229, 229)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+  
+  const configRPM = {
+    type: 'doughnut',
+    data: dataRPM,
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            filter: function (item, chart) {
+              return item.text !== 'Stand By';
+            }
           }
         }
       }
     }
+  };
+  
+  new Chart(
+    document.getElementById('graficoRPM'),
+    configRPM
+  );
+}
+
+async function chamarApi(dataComeco, dataFim) {
+  const resp = await fetch('http://localhost/Dashboard-TCC/BACKEND/dados.php?dataComeco=' + dataComeco + '&dataFim=' + dataFim);
+  
+  if (resp.status !== 200) {
+    return;
   }
-};
 
-new Chart(
-  document.getElementById('graficoRPM'),
-  configRPM
-);
-
-// Código para o gráfico de RPM.  
+  const obj = await resp.json();
+  for (let i in obj) {
+    arrayTemperatura.push(parseFloat(obj[i].temperatura));
+    arrayUmidadeAr.push(parseFloat(obj[i].umidade_ar));
+    arrayUmidadeSolo.push(parseFloat(obj[i].umidade_solo));
+    arrayData.push(obj[i].data.toString());
+    arrayHora.push(obj[i].hora.toString());
+    reservatorio = parseInt(obj[i].reservatorio);
+    rpm = parseInt(obj[i].rpm);
+  }
+  tabelaRPM();
+  tabelaReservatorio();
+  tabelaTemperatura();
+  tabelaUmidade();
+}
+chamarApi('2025-05-21', '2025-05-23');
