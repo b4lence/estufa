@@ -164,11 +164,47 @@ nav a {
     margin: 2vh;
 }
 
-#graficoRPM{
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.calendario{
     margin: 2vh;
+    width: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
 }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+}
+
+.dias{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.dia{
+    text-align: center;
+    padding: 5px;
+    color: gray;
+    font-weight: 500;
+}
 

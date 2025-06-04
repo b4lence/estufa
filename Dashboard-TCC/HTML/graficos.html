@@ -87,7 +87,27 @@
         </header>
         <div class="main-content">
             <div class="graficos-cima">
-                <canvas id="graficoRPM" style="width:50vh; height:50vh;"></canvas>
+                <div class="calendario" style="width: 40vh; height: 40vh;">
+                    <div class="header">
+                        <button id="botaoMesAnterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="mesAno"></div>
+                        <button id="botaoProximo">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="dias">
+                        <div class="dia">Dom</div>
+                        <div class="dia">Seg</div>
+                        <div class="dia">Ter</div>
+                        <div class="dia">Qua</div>
+                        <div class="dia">Qui</div>
+                        <div class="dia">Sex</div>
+                        <div class="dia">Sab</div>
+                    </div>
+                    <div class="datas" id="datas"></div>
+                </div>
                 <canvas id="graficoTemp" style="width:55vw; height:40vh;"></canvas>
             </div>
 

@@ -5,6 +5,18 @@ let arrayData = [];
 let arrayHora = [];
 let reservatorio = 0;
 let rpm = 0;
+const mesAnoElemento = document.getElementById('mesAno');
+const datasElemento = document.getElementById('datas');
+const botaoAnteriorElemento = document.getElementById('botaoMesAnterior');
+const botaoProximoElemento = document.getElementById('botaoProximo');
+let dataAtual = new Date();
+
+const atualizarCalendario = () => {
+  const anoAtual = dataAtual.getFullYear();
+  const mesAtual = dataAtual.getMonth();
+
+  const primeiroDia = new Date 
+}
 
 function tabelaUmidade(){
   const dataUmidade = {
@@ -184,7 +196,7 @@ function tabelaRPM(){
 }
 
 async function chamarApi(dataComeco, dataFim) {
-  const resp = await fetch('http://localhost/Dashboard-TCC/BACKEND/dados.php?dataComeco=' + dataComeco + '&dataFim=' + dataFim);
+  const resp = await fetch('http://localhost/Dashboard-TCC/BACKEND/pegarDados.php?dataComeco=' + dataComeco + '&dataFim=' + dataFim);
   
   if (resp.status !== 200) {
     return;
@@ -205,4 +217,4 @@ async function chamarApi(dataComeco, dataFim) {
   tabelaTemperatura();
   tabelaUmidade();
 }
-chamarApi('2025-05-21', '2025-05-23');
+chamarApi('2025-06-04', '2025-06-04');

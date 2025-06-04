@@ -1,7 +1,3 @@
-USE test;
-
-DROP DATABASE estufa;
-
 CREATE DATABASE estufa;
 
 USE estufa;
