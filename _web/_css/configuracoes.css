@@ -1,0 +1,305 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6vh;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 12%;
+    background-color: #212120;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    margin: 1vh;
+    height: 8vh;
+    width: calc(100% - 2vh); 
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+#sign-out{
+    margin-top: 58vh;
+}
+
+.img{
+    margin-right: 20px;
+    width: 6.5vh;
+    height: 6.5vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.menu-content {
+    margin: 1vh;
+    width: calc(100% - 2vh); 
+    color: lightgrey;
+}
+.link-nav{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.icon{
+    fill: lightgray;
+    width: 3vh;
+    height: 3vh;
+}
+
+.icon-notificacoes{
+    fill: gray;
+    width: 3vh;
+    height: 3vh;
+    transition: fill 0.3s ease-in-out;
+}
+
+.close-icon{
+    width: 2vw;
+    height: 2vh;
+    fill: dimgray;
+}
+
+.botao-icon:hover .icon-notificacoes {
+    fill: #14ad84;
+}
+
+.botao-icon:hover .notificacao-contador {
+    color: #14ad84;
+}
+
+.botao-icon {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: baseline;
+    justify-content: center;
+}
+
+.notificacao-contador{
+    margin-right: 1vw;
+    color: gray;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal{
+    color: dimgray;
+    background-color: white;
+    width: 40vw;
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+    height: 40vh;
+    padding: 10px;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.modal-content{
+    padding: 10px;
+}
+
+.notificacao{
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 6px;
+}
+
+.notificacao:hover{
+    color: #14ad84;
+    border: 2px solid #14ad84;
+}
+
+.icon-text{
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.link-nav a {
+    transition: color 0.3s ease-in-out;
+}
+
+.link-nav .icon {
+    transition: fill 0.3s ease-in-out;
+}
+
+.link-nav:hover a {
+    color: white;
+}
+
+.link-nav:hover .icon {
+    fill: white;
+}
+
+#selecionado {
+    color: #14ad84;
+    fill: #14ad84;
+}
+
+.seta {
+    position: absolute;
+    margin-left: 10%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 40px solid #f4f3ef;
+}
+
+.main{
+    background-color: #f4f3ef;
+    width: 88%;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vh;
+    height: 8%;
+    width: calc(100% - 2vh); 
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user-image{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    border: 2px solid #212120;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 2vh;
+    width: 15vh;
+    color: #212120;
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 92%;
+}
+
+.perfilUsuario{
+    width: 40vw;
+    height: 70vh;
+    margin: 2vh;
+    border-radius: 1vh;
+    background-color: white;
+}
+
+.cima{
+    height: 50%;
+    width: 100%;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    margin-bottom: -10vh;
+}
+
+.img-background{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    object-fit: cover;
+}
+
+.img-usuario{
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    object-fit: cover;
+    border: 0.5vh solid white;
+}
+
+.baixo{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    color: dimgray;
+}
+
+.plantAtual{
+    border-top: 1px solid gray;
+    padding: 2vh;
+    margin-top: 16vh;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.configuracoes{
+    width: 40vw;
+    height: 70vh;
+    margin: 2vh;
+    border-radius: 1vh;
+    background-color: white;
+}
