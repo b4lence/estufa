@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/login.css">
+    <title>Login GreenSync</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="left">
+            <img src="_assets/_img-login/login-animate.svg" alt="Imagem de um homem fazendo login" class="img-login">
+        </div>
+
+        <div class="right">
+            <div class="header">
+                <h1 style="font-size: 3.5vh; color: #14ad84;">GreenSync</h1>
+            </div>
+            <div class="login">
+
+                <form action="_php/login.php" method="post" class="form-box">
+
+                    <div class="input-box">
+                        <input type="text" name="nome" class="input" required placeholder=" " />
+                        <label class="label">Usuário</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" name="codigo" class="input" required placeholder=" " />
+                        <label class="label">Código do produto</label>
+                    </div>
+
+                    <div class="input-button">
+                        <input type="submit" value="Entrar" class="button">
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="bottom">
+                <div class="bottom-header">
+                    <div class="left-header"></div>
+                    <p style="color: dimgray;">Logar Com</p>
+                    <div class="right-header"></div>
+                </div>
+                <div class="logar-com">
+                    <button onclick="loginComGoogle()" class="button-logar-com">
+                        <img src="_assets/_img-login/Logo-Google-G.png" alt="Logar com Google" class="img-logar">
+                    </button>
+                    <button onclick="loginComInstagram()" class="button-logar-com">
+                        <img src="_assets/_img-login/logo-instagram.webp" alt="Logar com Instagram" class="img-logar">
+                    </button>
+                    <button onclick="loginComFacebook()" class="button-logar-com">
+                        <img src="_assets/_img-login/FB-f-Logo__blue_512.png" alt="Logar com Facebook"
+                            class="img-logar">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
