@@ -1,5 +1,6 @@
 # Projeto Estufa
-Projeto da estufa para o TCC.
+O projeto consiste no desenvolvimento de uma estufa automatizada capaz de monitorar e controlar variáveis ambientais essenciais para o cultivo de plantas. Utilizando um microcontrolador ESP32, o sistema coleta dados de sensores, como temperatura, umidade do ar e umidade do solo, processando essas informações em tempo real. Com base nos valores obtidos, o sistema pode acionar dispositivos como irrigação, ventilação e iluminação, mantendo condições adequadas para o crescimento das plantas.
+A telemetria da planta será exibida ao usuário em uma dashboard web
 
 # Links Relacionados
 
@@ -10,12 +11,10 @@ Projeto da estufa para o TCC.
 * *[DevLog](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fbianca_blued%2Fa-a-folou%2F&psig=AOvVaw0wP40yFw-DXKCvTfzm0mbG&ust=1743169905230000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjdl4y0qowDFQAAAAAdAAAAABAE)*
 * *[Estrutura Analítica do Projeto (EAP)](https://miro.com/app/board/uXjVIbsQpQA=/?share_link_id=215698681412)*
 
-# Requisitos e Atribuição de funções
-OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
+# Requisitos
 
 ## Pesquisa:
  
-**Atribuído a: Kauã e Tarik**
 * Flores / Plantas mais utilizadas (apto.)
 * Detalhes sobre o cuidado dessas plantas
 	* % da Umidade do ar
@@ -26,10 +25,8 @@ OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 	* Domo
 * Pesquisa geral sobre o funcionamento de uma estufa (caso tenhamos perdido algo)
   
-
 ## Design:
  
-**Atribuído a: Todos**
 * Design da Estufa
 	* Formato do vaso
 	* Posicionamento do domo da estufa
@@ -38,10 +35,8 @@ OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 	* Cores principais do site
 	* Wireframe do site usando Figma
  
-
 ## Pesquisa dos componentes e funcionamento da estufa:
  
-**Atribuído a: Vinícius**
 * Bomba de água e um sistema de irrigação
 * Placa de processamento utilizada
 	* Raspberry
@@ -52,8 +47,8 @@ OBS: Assim que sua parte do projeto for finalizada, ajudar quem precisar.
 	* Temperatura 
 * Ventilador
 * Alimentação de todos componentes (energia)
+
 ## Confecção do Site:
-**Atribuído a: Erik e Miguel**
 * Front-end
 	* HTML
 	* CSS
