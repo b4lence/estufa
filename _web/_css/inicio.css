@@ -1,0 +1,389 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.7vh;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 12%;
+    background-color: #212120;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    margin: 1vh;
+    height: 8vh;
+    width: calc(100% - 2vh); 
+    color: white;
+    border-bottom: 0.1vh solid gray;
+}
+
+#sign-out{
+    margin-top: 58vh;
+}
+
+.img{
+    margin-right: 1.7vh;
+    width: 6.5vh;
+    height: 6.5vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.menu-content {
+    margin: 1vh;
+    width: calc(100% - 2vh); 
+    color: lightgrey;
+}
+
+.link-nav{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.icon{
+    fill: lightgray;
+    width: 3vh;
+    height: 3vh;
+}
+
+.close-icon{
+    width: 2vw;
+    height: 2vh;
+    fill: dimgray;
+}
+
+.icon-notificacoes{
+    fill: gray;
+    width: 3vh;
+    height: 3vh;
+    transition: fill 0.3s ease-in-out;
+}
+
+.botao-icon:hover .icon-notificacoes {
+    fill: #14ad84;
+}
+
+.botao-icon:hover .notificacao-contador {
+    color: #14ad84;
+}
+
+.botao-icon {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: baseline;
+    justify-content: center;
+}
+
+.notificacao-contador{
+    margin-right: 1vw;
+    color: gray;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal{
+    color: dimgray;
+    background-color: white;
+    width: 40vw;
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+    height: 40vh;
+    padding: 10px;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.modal-content{
+    padding: 10px;
+}
+
+.notificacao{
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 6px;
+}
+
+.notificacao:hover{
+    color: #14ad84;
+    border: 2px solid #14ad84;
+}
+
+.icon-text{
+    margin-left: 0.8vw;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.link-nav a {
+    transition: color 0.3s ease-in-out;
+}
+
+.link-nav .icon {
+    transition: fill 0.3s ease-in-out;
+}
+
+.link-nav:hover a {
+    color: white;
+}
+
+.link-nav:hover .icon {
+    fill: white;
+}
+
+#selecionado {
+    color: #14ad84;
+    fill: #14ad84;
+}
+
+.seta {
+    position: absolute;
+    margin-left: 10%;
+    width: 0;
+    height: 0;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-right: 4vh solid #f4f3ef;
+}
+
+.main{
+    background-color: #f4f3ef;
+    width: 88%;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vh;
+    height: 8%;
+    width: calc(100% - 2vh); 
+    color: gray;
+    border-bottom: 0.1vh solid gray;
+}
+
+.main-content{
+    height: 92%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.planta_img{
+    margin-bottom: 1vh;
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    border: 1vh solid #14ad84;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.input-planta{
+    color: dimgray;
+    width: 12vw;
+    height: 3.5vh;
+    border: 0.2vh solid #0f9672;
+    border-radius: 0.8vh;
+    padding-left: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button{
+    height: 3.5vh;
+    width: 6vw;
+    border-radius: 0.8vh;
+    border: none;
+    background-color: #0f9672;
+    color: white;
+    margin-top: 1vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input-planta:focus {
+    border: 0.3vh solid #0f9672;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #0e8061;
+}
+
+.planta_local_img{
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+.meio{
+    height: auto;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 65vh;
+    width: 30vw;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 65vh;
+    width: 30vw;
+}
+
+.esquerdaCima{
+    display: flex;
+    justify-content: flex-end; /* mantém tudo colado à direita */
+    align-items: center;       /* alinha verticalmente */
+    width: 100%;
+    height: 33%;
+}
+
+.esquerdaBaixo {
+    display: flex;
+    justify-content: flex-end; /* mantém tudo colado à direita */
+    align-items: center;       /* alinha verticalmente */
+    width: 100%;
+    height: 33%;
+    margin-bottom: 5vh;
+}
+
+.direitaCima{
+    display: flex;
+    justify-content: flex-start; /* mantém tudo colado à direita */
+    align-items: center;       /* alinha verticalmente */
+    width: 100%;
+    height: 33%;
+}
+
+.direitaBaixo{
+    display: flex;
+    justify-content: flex-start; /* mantém tudo colado à direita */
+    align-items: center;       /* alinha verticalmente */
+    width: 100%;
+    height: 33%;
+    margin-bottom: 5vh;
+}
+
+.galho{
+    height: auto;
+    width: 25vw;
+}
+
+.iconUmidadeAr{
+    margin-top: 6vh;
+    height: auto;
+    width: 5vw;
+}
+
+.iconReservatorio{
+    margin-top: 8vh;
+    height: auto;
+    width: 5vw;
+}
+
+.iconTemperatura{
+    height: auto;
+    width: 5vw; 
+    margin-top: -6vh;
+}
+
+.iconUmidadeSolo{
+    height: auto;
+    width: 5vw; 
+    margin-top: -7vh;
+}
+.spanNivelReservatorio{
+    margin-left: 1vh;
+    margin-top: 11vh;
+    color: #14ad84;
+    font-size: 4vh;
+}
+
+.spanUmidadeSolo{
+    color: #14ad84;
+    font-size: 4vh;
+    margin-left: 1vh;
+    margin-top: -12vh;
+}
+
+.spanUmidadeAr{
+    color: #14ad84;
+    font-size: 4vh;
+    margin-top: 11vh;
+    margin-right: 1vh;
+}
+
+.spanTemperatura{
+    font-size: 4vh;
+    color: #14ad84;
+    margin-top: -12vh;
+    margin-right: 1vh;
+}

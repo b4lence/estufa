@@ -1,0 +1,181 @@
+:root {
+    --primary: #4baa84;
+    --dark-green: #1b4332;
+    --nature-green: #2d6a4f;
+    --beige: #f4f1ea;
+    --light: #ffffff;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: linear-gradient(90deg, var(--nature-green), var(--dark-green));
+}
+
+.navbar-custom .nav-link {
+    color: var(--light);
+    position: relative;
+}
+
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--light);
+    transition: width .3s;
+}
+
+.navbar-custom .nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-custom {
+    background: var(--primary);
+    color: var(--light);
+    border-radius: 30px;
+    padding: .5rem 1.5rem;
+    transition: all .3s;
+}
+
+.btn-custom:hover {
+    background: var(--dark-green);
+    transform: scale(1.05);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: var(--light);
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.navbar .logo {
+    height: 40px;
+    width: auto;
+    max-height: 8vh;
+    object-fit: contain;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f1f1f1 !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--nature-green);
+    font-weight: 700;
+}
+
+.bg-nature {
+    background: var(--nature-green);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--light);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.social-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .3);
+    color: white;
+}
+
+.instagram {
+    background: #e1306c;
+    text-decoration: none;
+}
+
+.facebook {
+    background: #1877f2;
+    text-decoration: none;
+}
+
+.whatsapp {
+    background: #25d366;
+    text-decoration: none;
+}
+
+.twitter {
+    background: #1da1f2;
+    text-decoration: none;
+}
+
+.footer {
+    background: var(--dark-green);
+    color: var(--light);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}

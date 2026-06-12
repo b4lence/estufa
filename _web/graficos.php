@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/graficos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>FloraSync Dashboard</title>
+</head>
+
+<body>
+    <div class="menu">
+        <header class="menu-header">
+            <img src="_assets/logoplanta2.png" alt="Logo" class="img">
+            <p>FloraSync</p>
+        </header>
+        <div class="menu-content">
+            <nav class="nav-bar">
+
+                <ul class="link-nav">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 50 50">
+                        <path
+                            d="M 24.960938 2.1015625 A 1.0001 1.0001 0 0 0 24.386719 2.3105469 L 1.3867188 20.210938 A 1.0001 1.0001 0 1 0 2.6132812 21.789062 L 4 20.708984 L 4 48 A 1.0001 1.0001 0 0 0 5 49 L 18.832031 49 A 1.0001 1.0001 0 0 0 19.158203 49 L 30.832031 49 A 1.0001 1.0001 0 0 0 31.158203 49 L 45 49 A 1.0001 1.0001 0 0 0 46 48 L 46 20.708984 L 47.386719 21.789062 A 1.0001 1.0001 0 1 0 48.613281 20.210938 L 25.613281 2.3105469 A 1.0001 1.0001 0 0 0 24.960938 2.1015625 z M 25 4.3671875 L 44 19.154297 L 44 47 L 32 47 L 32 29 A 1.0001 1.0001 0 0 0 31 28 L 19 28 A 1.0001 1.0001 0 0 0 18 29 L 18 47 L 6 47 L 6 19.154297 L 25 4.3671875 z M 20 30 L 30 30 L 30 47 L 20 47 L 20 30 z">
+                        </path>
+                    </svg>
+                    <li class="icon-text"><a href="inicio.php">Início</a></li>
+                </ul>
+
+                <ul class="link-nav" id="selecionado">
+                    <svg class="icon" id="selecionado" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" id="Layer_1" x="0px"
+                        y="0px" width="24px" height="24px" viewBox="0 0 24 24" xml:space="preserve">
+                        <path
+                            d="M23,20.6H1.4v-5.392l6.608-4.653l3.821,1.807C11.884,12.388,11.942,12.4,12,12.4h0h0c0.002,0,0.004-0.002,0.007-0.002  c0.077-0.001,0.15-0.026,0.214-0.069c0.004-0.003,0.009-0.001,0.013-0.004l11-7.969c0.179-0.129,0.219-0.379,0.089-0.559  c-0.129-0.179-0.378-0.22-0.559-0.089l-10.808,7.83L8.14,9.732C8.123,9.724,8.104,9.725,8.087,9.719  C8.063,9.711,8.039,9.704,8.013,9.701C7.984,9.697,7.958,9.699,7.931,9.702c-0.023,0.002-0.045,0.004-0.068,0.01  c-0.028,0.008-0.054,0.021-0.08,0.035c-0.014,0.007-0.03,0.009-0.044,0.019L1.4,14.229V3c0-0.221-0.179-0.4-0.4-0.4S0.6,2.779,0.6,3  v18c0,0.221,0.179,0.4,0.4,0.4h22c0.221,0,0.4-0.179,0.4-0.4S23.221,20.6,23,20.6z" />
+                    </svg>
+                    <li class="icon-text" id="selecionado"><a href="graficos.php" id="selecionado">Gráficos</a></li>
+                    <div class="seta"></div>
+                </ul>
+
+                <ul class="link-nav">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" data-name="Livello 1" id="Livello_1"
+                        viewBox="0 0 128 128">
+                        <title />
+                        <path
+                            d="M64,39A25,25,0,1,0,89,64,25,25,0,0,0,64,39Zm0,44A19,19,0,1,1,83,64,19,19,0,0,1,64,83Z" />
+                        <path
+                            d="M121,48h-8.93a1,1,0,0,1-.94-.68,49.9,49.9,0,0,0-2-4.85,1,1,0,0,1,.18-1.15L115.62,35a7,7,0,0,0,0-9.9L102.89,12.38a7,7,0,0,0-9.9,0l-6.31,6.31a1,1,0,0,1-1.15.18,49.76,49.76,0,0,0-4.85-2,1,1,0,0,1-.68-.94V7a7,7,0,0,0-7-7H55a7,7,0,0,0-7,7v8.93a1,1,0,0,1-.68.94,49.9,49.9,0,0,0-4.85,2,1,1,0,0,1-1.15-.18L35,12.38a7,7,0,0,0-9.9,0L12.38,25.11a7,7,0,0,0,0,9.9l6.31,6.31a1,1,0,0,1,.18,1.15,49.76,49.76,0,0,0-2,4.85,1,1,0,0,1-.94.68H7a7,7,0,0,0-7,7V73a7,7,0,0,0,7,7h8.93a1,1,0,0,1,.94.68,49.9,49.9,0,0,0,2,4.85,1,1,0,0,1-.18,1.15L12.38,93a7,7,0,0,0,0,9.9l12.73,12.73a7,7,0,0,0,9.9,0l6.31-6.31a1,1,0,0,1,1.15-.18,49.76,49.76,0,0,0,4.85,2,1,1,0,0,1,.68.94V121a7,7,0,0,0,7,7H73a7,7,0,0,0,7-7v-8.93a1,1,0,0,1,.68-.94,49.9,49.9,0,0,0,4.85-2,1,1,0,0,1,1.15.18L93,115.62a7,7,0,0,0,9.9,0l12.73-12.73a7,7,0,0,0,0-9.9l-6.31-6.31a1,1,0,0,1-.18-1.15,49.76,49.76,0,0,0,2-4.85,1,1,0,0,1,.94-.68H121a7,7,0,0,0,7-7V55A7,7,0,0,0,121,48Zm1,25a1,1,0,0,1-1,1h-8.93a7,7,0,0,0-6.6,4.69,43.9,43.9,0,0,1-1.76,4.26,7,7,0,0,0,1.35,8l6.31,6.31a1,1,0,0,1,0,1.41L98.65,111.38a1,1,0,0,1-1.41,0l-6.31-6.31a7,7,0,0,0-8-1.35,43.88,43.88,0,0,1-4.27,1.76,7,7,0,0,0-4.68,6.6V121a1,1,0,0,1-1,1H55a1,1,0,0,1-1-1v-8.93a7,7,0,0,0-4.69-6.6,43.9,43.9,0,0,1-4.26-1.76,7,7,0,0,0-8,1.35l-6.31,6.31a1,1,0,0,1-1.41,0L16.62,98.65a1,1,0,0,1,0-1.41l6.31-6.31a7,7,0,0,0,1.35-8,43.88,43.88,0,0,1-1.76-4.27A7,7,0,0,0,15.93,74H7a1,1,0,0,1-1-1V55a1,1,0,0,1,1-1h8.93a7,7,0,0,0,6.6-4.69,43.9,43.9,0,0,1,1.76-4.26,7,7,0,0,0-1.35-8l-6.31-6.31a1,1,0,0,1,0-1.41L29.35,16.62a1,1,0,0,1,1.41,0l6.31,6.31a7,7,0,0,0,8,1.35,43.88,43.88,0,0,1,4.27-1.76A7,7,0,0,0,54,15.93V7a1,1,0,0,1,1-1H73a1,1,0,0,1,1,1v8.93a7,7,0,0,0,4.69,6.6,43.9,43.9,0,0,1,4.26,1.76,7,7,0,0,0,8-1.35l6.31-6.31a1,1,0,0,1,1.41,0l12.73,12.73a1,1,0,0,1,0,1.41l-6.31,6.31a7,7,0,0,0-1.35,8,43.88,43.88,0,0,1,1.76,4.27,7,7,0,0,0,6.6,4.68H121a1,1,0,0,1,1,1Z" />
+                    </svg>
+                    <li class="icon-text"><a href="configuracoes.php">Configurações</a></li>
+                </ul>
+
+                <ul class="link-nav" id="sign-out">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" id="Flat" viewBox="0 0 256 256">
+                        <path
+                            d="M221.68652,133.65723l-42,42a8.00035,8.00035,0,0,1-11.314-11.31446L196.71582,136H104a8,8,0,0,1,0-16h92.71582L168.37256,91.65723a8.00035,8.00035,0,0,1,11.314-11.31446l42,42A8.0012,8.0012,0,0,1,221.68652,133.65723ZM120,208H48V48h72a8,8,0,0,0,0-16H48A16.01833,16.01833,0,0,0,32,48V208a16.01833,16.01833,0,0,0,16,16h72a8,8,0,0,0,0-16Z" />
+                    </svg>
+                    <li class="icon-text"><a href="_php/_login/logoutHandler.php">Sair</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+
+        <header class="main-header">
+            <p>Gráficos</p>
+            <button class="botao-icon" id="open">
+                <svg class="icon-notificacoes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+                        </style>
+                    </defs>
+                    <title />
+                    <g data-name="Layer 2" id="Layer_2">
+                        <path
+                            d="M16,29a4,4,0,0,1-4-4,1,1,0,0,1,1-1h6a1,1,0,0,1,1,1A4,4,0,0,1,16,29Zm-1.73-3a2,2,0,0,0,3.46,0Z" />
+                        <path d="M18,7H14a1,1,0,0,1-1-1,3,3,0,0,1,6,0A1,1,0,0,1,18,7ZM16,5h0Z" />
+                        <path
+                            d="M27,26H5a1,1,0,0,1-1-1,7,7,0,0,1,3-5.75V14a9,9,0,0,1,8.94-9h.11a9,9,0,0,1,9,9v5.25A7,7,0,0,1,28,25h0A1,1,0,0,1,27,26ZM6.1,24H25.9a5,5,0,0,0-2.4-3.33,1,1,0,0,1-.5-.87V14A7,7,0,1,0,9,14v5.8a1,1,0,0,1-.5.87A5,5,0,0,0,6.1,24Z" />
+                    </g>
+                    <g id="frame">
+                        <rect class="cls-1" height="32" width="32" />
+                    </g>
+                </svg>
+                <span class="notificacao-contador" id="contador"></span>
+            </button>
+            <div class="modal-container" id="modal_container">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h1>Notificações</h1>
+                        <button id="close" class="botao-icon">
+                            <svg class="close-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-content" id="modal-content">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+
+            <div class="graficos-cima">
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+                <div class="calendar" style="width: 40vh; height: 40vh;">
+                    <div class="header">
+                        <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+                        <div id="month-year"></div>
+                        <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="weekdays">
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sab</div>
+                        <div>Dom</div>
+                    </div>
+                    <div class="days" id="days"></div>
+                </div>
+                <canvas id="graficoTemp" style="width:55vw; height:40vh;"></canvas>
+            </div>
+
+            <div class="graficos-baixo">
+                <div class="redimensionarTamanho">
+                    <canvas id="graficoUmidade" style="width:55vw; height:40vh;"></canvas>
+                </div>
+                <canvas id="graficoReservatorio" style="width: 40vh; height: 40vh;"></canvas>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="_js/graficos.js"></script>
+    <script type="module" src="_js/notificacoes.js"></script>
+</body>
+
+</html>
